@@ -9,16 +9,20 @@
         background-color: rgb(94, 94, 166);
         color:aliceblue;
         font: normal 1rem Arial;
-        text-align: center;
+        text-align: left;
        }
 
     </style>
 </head>
 <body>
-    <h1 class="tit">Olá, Mundo!</h1>
+    <h1 >Olá, Mundo!</h1>
     <p>Já me livrei da maldição</p>
     <script>
-        alert('Hello, Word!')
+        alert('Hello, Word!') // Mensagem de alerta que aparece no navegador
+        confirm('Está gostando de JavaScritp?') // Mensagem de coonfirmação que aparece no navegador
+        let idade = prompt('Qual sua idade?') // Cria-se a variavel idade para receber o comando de pergunta que aparece no navegador e amarzenar seu valor
+        let mensagem = document.querySelector('p') // Cria-se a variavel mensagem para receber a tag de texto <p> e amarzenar seu valor
+        mensagem.innerHTML = `<p>Minha idade é ${idade}</p>` // Sera escrito na variavel mensagem o código html com a variável idade configurada.
     </script>
 </body>
 </html>
