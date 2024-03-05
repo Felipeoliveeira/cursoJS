@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos com DOM</title>
+    <style>
+      body {
+        background-color: rgb(88, 100, 192);
+        color: white;
+        font-size: 20pt Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando os estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScritp.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+      let corpo = document.body;
+      let p1 = document.getElementsByTagName("p")[0];
+      let d = document.getElementById("msg");
+      d.textContent = "Aguadando ..";
+    </script>
+  </body>
+</html>
