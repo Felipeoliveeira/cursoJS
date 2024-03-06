@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos DOM</title>
-</head>
-<body>
-    <div id="area">Interaja</div>
-</body>
+    <style>
+      #area {
+        background: rgb(99, 202, 99);
+        color: white;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="area">Interaja...</div>
+    <script>
+        let div = document.getElementById('area');
+        div.addEventListener('click', clicar);
+        div.addEventListener('mouseenter',entrar);
+        div.addEventListener('mouseleave',sair)
+        function clicar(){
+            div.style.background = 'red'
+            div.innerText = 'Você interagiu, parabéns.'
+        }
+        function entrar(){
+            div.style.background = 'Blue';
+            div.innerText = 'Mouse entrou'
+        }
+        function sair(){
+            div.style.background = 'yellow'
+            div.style.color = 'black'
+            div.innerText = 'Mouse saiu'
+        }
+    </script>
+  </body>
 </html>

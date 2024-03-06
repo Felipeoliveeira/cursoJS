@@ -21,7 +21,9 @@
       let corpo = document.body;
       let p1 = document.getElementsByTagName("p")[0];
       let d = document.getElementById("msg");
-      d.textContent = "Aguadando ..";
+      let msg = 'Aguardando ..'
+      d.style.color = 'black'
+      d.innerText = `Estou ${msg}`.toUpperCase()
     </script>
   </body>
 </html>
