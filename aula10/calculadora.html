@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste com DOM</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(158, 153, 153);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+    }
+    button {
+      height: 30px;
+      width: 60px;
+      font-size: 40%;
+      font-weight: bolder;
+    }
+    input {
+      border-radius: 5px;
+      border: transparent;
+      height: 20px;
+      padding: 6px;
+    }
+    #container{
+      width: 50%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  </style>
+  <body>
+    <h1>Manipulando Dados com DOM</h1>
+    <input type="number" name="n1" id="n1"/>
+    <input type="number" name="n2" id="n2"/>
+    <div id="resultado"></div>
+    <div id="container">
+      <button onclick="soma()">Soma</button>
+      <button onclick="subtracao()">Subtração</button>
+      <button onclick="divisao()">Divisão</button>
+      <button onclick="multiplicacao()">Multiplicação</button>
+    </div>
+    <script>
+      let i1 = document.getElementById("n1");
+      let i2 = document.getElementById("n2");
+      let res = document.getElementById("resultado");
+      function soma() {
+        let v1 = Number(i1.value)
+        let v2 = Number(i2.value)
+        let resul = v1 + v2;
+        res.innerText = `A soma dos valores é ${resul}`;
+      }
+      function subtracao(){
+        let v1 = Number(i1.value)
+        let v2 = Number(i2.value)
+        let resul = v1 - v2;
+        res.innerText = `A subtracao dos valores é ${resul}`; 
+      }
+      function divisao(){
+        let v1 = Number(i1.value)
+        let v2 = Number(i2.value)
+        let resul = v1 / v2;
+        res.innerText = `A divisão dos valores é ${resul}`; 
+      }
+      function multiplicacao(){
+        let v1 = Number(i1.value)
+        let v2 = Number(i2.value)
+        let resul = v1 *  v2;
+        res.innerText = `A multiplicação dos valores é ${resul}`;
+      }
+    </script>
+  </body>
+</html>
