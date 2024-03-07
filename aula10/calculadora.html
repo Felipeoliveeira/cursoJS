@@ -15,7 +15,7 @@
     }
     button {
       height: 30px;
-      width: 20%;
+      width: 15%;
       font-size: 8px;
       font-family: 'Courier New', Courier, monospace;
       font-weight: bolder;
@@ -52,6 +52,7 @@
       <button onclick="subtracao()">Subtração</button>
       <button onclick="divisao()">Divisão</button>
       <button onclick="multiplicacao()">Multiplicação</button>
+      <button onclick="reset()">Reset</button>
     </div>
     <script>
       let i1 = document.getElementById("n1");
@@ -62,28 +63,34 @@
         let v2 = Number(i2.value)
         let resul = v1 + v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)';
-        res.innerText = `A soma dos valores é ${resul}`;
+        res.innerText = `A soma dos valores ${v1} + ${v2} = ${resul}`;
       }
       function subtracao(){
         let v1 = Number(i1.value)
         let v2 = Number(i2.value)
         let resul = v1 - v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)';
-        res.innerText = `A subtracao dos valores é ${resul}`; 
+        res.innerText = `A subtracao dos valores ${v1} - ${v2} = ${resul}`;
       }
       function divisao(){
         let v1 = Number(i1.value)
         let v2 = Number(i2.value)
         let resul = v1 / v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)';
-        res.innerText = `A divisão dos valores é ${resul}`; 
+        res.innerText = `A divisão dos valores ${v1} / ${v2} = ${resul}`;
       }
       function multiplicacao(){
         let v1 = Number(i1.value)
         let v2 = Number(i2.value)
         let resul = v1 *  v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)'
-        res.innerText = `A multiplicação dos valores é ${resul}`;
+        res.innerText = `A multiplicação dos valores ${v1} * ${v2} =  ${resul}`;
+      }
+      function reset(){
+        res.style.backgroundColor = 'rgb(158, 153, 153)';
+        res.innerText = '';
+        i1.value = '';
+        i2.value = '';
       }
     </script>
   </body>
