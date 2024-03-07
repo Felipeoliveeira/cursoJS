@@ -11,7 +11,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 50px;
+      gap: 20px;
     }
     button {
       height: 30px;
@@ -41,10 +41,15 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    #sinal{
+      height: 20px;
+    }
   </style>
   <body>
     <h1>Manipulando Dados com DOM</h1>
+    <label for="n1">Escolha os Valores:</label>
     <input type="number" name="n1" id="n1"/>
+    <div id="sinal"></div>
     <input type="number" name="n2" id="n2"/>
     <div id="container_resul"><p id="resultado"></p></div>
     <div id="container">
@@ -58,12 +63,14 @@
       let i1 = document.getElementById("n1");
       let i2 = document.getElementById("n2");
       let res = document.getElementById("resultado");
+      let sinal = document.getElementsByTagName('div')[0];
       function soma() {
         let v1 = Number(i1.value)
         let v2 = Number(i2.value)
         let resul = v1 + v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)';
         res.innerText = `A soma dos valores ${v1} + ${v2} = ${resul}`;
+        sinal.innerText = '+'
       }
       function subtracao(){
         let v1 = Number(i1.value)
@@ -71,6 +78,7 @@
         let resul = v1 - v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)';
         res.innerText = `A subtracao dos valores ${v1} - ${v2} = ${resul}`;
+        sinal.innerText = '-';
       }
       function divisao(){
         let v1 = Number(i1.value)
@@ -78,13 +86,15 @@
         let resul = v1 / v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)';
         res.innerText = `A divisão dos valores ${v1} / ${v2} = ${resul}`;
+        sinal.innerText = '/'
       }
       function multiplicacao(){
         let v1 = Number(i1.value)
         let v2 = Number(i2.value)
         let resul = v1 *  v2;
         res.style.backgroundColor = 'rgb(111, 174, 111)'
-        res.innerText = `A multiplicação dos valores ${v1} * ${v2} =  ${resul}`;
+        res.innerText = `A multiplicação dos valores ${v1} x ${v2} =  ${resul}`;
+        sinal.innerText = 'x';
       }
       function reset(){
         res.style.backgroundColor = 'rgb(158, 153, 153)';
