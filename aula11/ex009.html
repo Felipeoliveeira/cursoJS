@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Condições em JavaScript</title>
-</head>
-<body>
-    
-</body>
+    <style>
+      body {
+        background-image: linear-gradient(
+          to right,
+          rgb(25, 25, 79),
+          rgb(66, 26, 26)
+        );
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        border: transparent;
+        color: white;
+      }
+      input{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Qual sua naturalidade</h1>
+    <label for="pais">Insira o país em que você nasceu:</label>
+    <input id="pais" type="pais">
+    <div id="botao">Resultado</div>
+    <div id="resp"></div>
+    <script>
+        let input = document.querySelector('#pais')
+        let resp= document.querySelector('#resp')
+        let botao = document.querySelector('#botao')
+        botao.addEventListener('click', resultado)
+
+        function resultado(){
+            if(input.value == 'brasil'){
+                resp.innerText = `Você nasceu no ${input.value}, então é brasileiro`
+            }else{
+                resp.innerText = `Você nasceu no ${input.value}, então é estrangeiro`
+            }
+        }
+ 
+    </script>
+  </body>
 </html>
