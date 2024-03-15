@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperando horário do Sistema</title>
+  </head>
+  <style>
+    body {
+      background-image: linear-gradient(
+        to right,
+        rgb(95, 43, 43),
+        rgb(38, 38, 90)
+      );
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    div {
+      width: 20%;
+      height: 20px;
+      background-color: rgb(104, 100, 100);
+      color: white;
+      font-size: 1rem;
+    }
+  </style>
+  <body>
+    <h1>QUE HORAS SÃO?</h1>
+    <div id="mostra_hora"></div>
+    <button id="gerar_horario">Clique aqui</button>
+    <button id="limpa">Limpar</button>
+    <script>
+      let gerarHora = document.querySelector("#gerar_horario");
+      let mostrarHora = document.getElementById('mostra_hora');
+      let limpa = document.querySelector('#limpa')
+      let hora = new Date().getHours();
+      let minuto = new Date().getMinutes();
+      gerarHora.addEventListener("click", horario);
+      limpa.addEventListener('click', limpar)
+      function horario() {
+        mostrarHora.innerText= `São exatamente: ${hora}:${minuto} horas`
+        console.log(`${hora}:${minuto} horas`);
+      }
+      function limpar(){
+        
+      }
+    </script>
+  </body>
+</html>
