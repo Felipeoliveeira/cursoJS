@@ -26,25 +26,24 @@
     }
   </style>
   <body>
+
     <h1>QUE HORAS SÃO?</h1>
     <div id="mostra_hora"></div>
     <button id="gerar_horario">Clique aqui</button>
-    <button id="limpa">Limpar</button>
+
     <script>
       let gerarHora = document.querySelector("#gerar_horario");
-      let mostrarHora = document.getElementById('mostra_hora');
-      let limpa = document.querySelector('#limpa')
-      let hora = new Date().getHours();
-      let minuto = new Date().getMinutes();
+      let mostrarHora = document.getElementById("mostra_hora");
       gerarHora.addEventListener("click", horario);
-      limpa.addEventListener('click', limpar)
+
       function horario() {
-        mostrarHora.innerText= `São exatamente: ${hora}:${minuto} horas`
-        console.log(`${hora}:${minuto} horas`);
+        let hora = new Date().getHours();
+        let minuto = new Date().getMinutes();
+        let segundos = new Date().getSeconds();
+        mostrarHora.innerText = `São exatamente: ${hora}:${minuto}:${segundos}`;
+        setInterval(horario, 1000);
       }
-      function limpar(){
-        
-      }
+      
     </script>
   </body>
 </html>
