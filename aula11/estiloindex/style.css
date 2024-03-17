@@ -6,36 +6,53 @@
 }
 body,
 main {
-  height: 95vh;
+  height: 96vh;
   width: 96vw;
-  background-image: linear-gradient(to right, rgb(95, 43, 43), rgb(38, 38, 90));
   font-family: "Share Tech Mono", monospace;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 30px;
 }
-
+body {
+  background-image: url(pexels-ayşenaz-bilgin-15407302.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: rgba(187, 144, 35, 0.796);
+}
+h1 {
+  margin-bottom: 20px;
+}
 div {
   width: 50%;
   height: 20%;
-  background-color: rgb(104, 100, 100);
+  background-color: rgba(104, 100, 100, 0.438);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4rem;
+  padding: 8px;
 }
 
 p {
   font-size: 30px;
-  align-self: baseline;
-}
-
-.ponto {
-  font-size: 1rem;
+  align-self: flex-end;
 }
 
 @media (min-width: 1200px) {
+  main {
+    flex-direction: row;
+  }
+  div {
+    width: 20%;
+    height: 40%;
+    font-size: 6rem;
+  }
+  p {
+    align-self: flex-end;
+  }
 }
