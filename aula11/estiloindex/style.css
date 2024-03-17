@@ -30,6 +30,8 @@ div {
   width: 50%;
   height: 20%;
   background-color: rgba(104, 100, 100, 0.438);
+  color: black;
+  font-weight: bolder;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -53,6 +55,6 @@ p {
     font-size: 6rem;
   }
   p {
-    align-self: flex-end;
+    align-self: flex-end ;
   }
 }
