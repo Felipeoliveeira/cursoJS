@@ -4,46 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recuperando horário do Sistema</title>
+    <link rel="stylesheet" href="estiloindex/style.css">
   </head>
-  <style>
-    body {
-      background-image: linear-gradient(
-        to right,
-        rgb(95, 43, 43),
-        rgb(38, 38, 90)
-      );
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    div {
-      width: 20%;
-      height: 20px;
-      background-color: rgb(104, 100, 100);
-      color: white;
-      font-size: 1rem;
-    }
-  </style>
-  <body>
-
-    <h1>QUE HORAS SÃO?</h1>
-    <div id="mostra_hora"></div>
-    <button id="gerar_horario">Clique aqui</button>
-
-    <script>
-      let gerarHora = document.querySelector("#gerar_horario");
+  <body onclick="horario()">
+    <h1>Descubra o horário</h1>
+    <h2>Clica na tela</h2>
+    <main>
+      <div id="mostra_hora"></div>
+      <p class="ponto"></p>
+      <div id="mostra_minuto"></div>
+      <p class="ponto"></p>
+      <div id="mostra_segundo"></div>
+    </main>
+  <script>
+      let clique = document.getElementsByTagName('body')
       let mostrarHora = document.getElementById("mostra_hora");
-      gerarHora.addEventListener("click", horario);
+      let mostraminuto = document.getElementById('mostra_minuto');
+      let mostrasegundo = document.getElementById('mostra_segundo');
+      let tempo = '';
 
       function horario() {
         let hora = new Date().getHours();
         let minuto = new Date().getMinutes();
         let segundos = new Date().getSeconds();
-        mostrarHora.innerText = `São exatamente: ${hora}:${minuto}:${segundos}`;
+
+        if ( hora < 12 ){
+          tempo = 'AM';
+        }else{
+          tempo = 'PM';
+        }
+
+        mostrarHora.innerText = `${hora}`;
+        mostraminuto.innerText = `${minuto}`;
+        mostrasegundo.innerHTML = `<div id="mostra_segundo">${segundos}<p>${tempo}</p></div>`;
         setInterval(horario, 1000);
+
       }
-      
     </script>
   </body>
 </html>
