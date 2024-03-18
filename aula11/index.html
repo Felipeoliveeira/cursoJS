@@ -13,13 +13,16 @@
       <div id="mostra_hora"></div>
       <div id="mostra_minuto"></div>
       <div id="mostra_segundo"></div>
+      <!-- <button class="clear">Clear Time</button> Adicionar botão Clear posteriomente. -->
     </main>
     <script>
       let clique = document.getElementsByTagName("body");
       let mostrarHora = document.getElementById("mostra_hora");
       let mostraminuto = document.getElementById("mostra_minuto");
       let mostrasegundo = document.getElementById("mostra_segundo");
+      let clearTime = document.querySelector('.clear');
       let tempo = "";
+      clearTime.addEventListener('click', clear())
 
       function horario() {
         let hora = new Date().getHours();

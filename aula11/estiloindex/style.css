@@ -23,9 +23,7 @@ body {
   background-repeat: no-repeat;
   color: rgba(187, 144, 35, 0.796);
 }
-h1 {
-  margin-bottom: 20px;
-}
+
 div {
   width: 50%;
   height: 20%;
@@ -45,16 +43,19 @@ p {
   align-self: flex-end;
 }
 
+
 @media (min-width: 1200px) {
   main {
     flex-direction: row;
+    margin-top: 0px;
   }
   div {
     width: 20%;
     height: 40%;
     font-size: 6rem;
+    padding: 0px;
   }
   p {
-    align-self: flex-end ;
+    align-self: center ;
   }
 }
