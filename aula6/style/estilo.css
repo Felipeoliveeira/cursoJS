@@ -1,0 +1,30 @@
+body {
+    width: 90vw;
+    height: 90vh;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(71, 71, 174);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 35%;
+    height: 50%;
+    padding: 8px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px black;
+}
+
+button {
+    width: 20%;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

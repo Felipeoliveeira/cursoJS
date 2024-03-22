@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qual a sua Idade?</title>
+    <link rel="stylesheet" href="style/estilo.css">
+  </head>
+  <body>
+    <h1>Verificador de idade</h1>
+    <main>
+      <label for="year"
+        >Ano de Nascimento <input type="number" name="" id="year"
+      /></label>
+      <p>Sexo : <input type="checkbox" name="" id="sex"><label for="sex">Masculino</label> <input type="checkbox" name="" id="sexF"><label for="sexF">Feminino</label></p>
+      <button onclick="gerarIdade()">Verificar</button>
+      <div id="container">
+        <p id="idade_text">Olá</p>
+        <div id="image"></div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
