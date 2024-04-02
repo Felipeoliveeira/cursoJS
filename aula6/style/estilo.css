@@ -1,30 +1,31 @@
-body {
-    width: 90vw;
-    height: 90vh;
-    margin: 0px;
-    padding: 0px;
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(72, 72, 179);
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(71, 71, 174);
 }
 
-main {
+h1{
+    padding: 10px;
+}
+
+section{
+    height: 20%;
+    width: 60%;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    width: 35%;
-    height: 50%;
-    padding: 8px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 3px black;
+    gap: 10px;
 }
 
-button {
+button{
     width: 20%;
-}
-#container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }

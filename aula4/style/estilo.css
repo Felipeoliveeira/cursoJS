@@ -24,22 +24,15 @@ main {
   gap: 30px;
 }
 
-p{
+p {
   color: black;
   font-size: 1rem;
 }
 
-div{
-    width: 50%;
-    height: 50%;
-    background-color: rgb(98, 93, 93);
-    border-radius: 50%;
-    background-image: url(amanhecer.jpg);
-    background-position: center;
-    background-size: cover;
-    border: 1px solid rgb(57, 57, 57);
+#img {
+  height: 50%;
+  width: 50%;
 }
-
-#footer{
-    color: white;
+#footer {
+  color: white;
 }

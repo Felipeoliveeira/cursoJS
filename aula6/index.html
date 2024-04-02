@@ -7,18 +7,13 @@
     <link rel="stylesheet" href="style/estilo.css">
   </head>
   <body>
-    <h1>Verificador de idade</h1>
-    <main>
-      <label for="year"
-        >Ano de Nascimento <input type="number" name="" id="year"
-      /></label>
-      <p>Sexo : <input type="checkbox" name="" id="sex"><label for="sex">Masculino</label> <input type="checkbox" name="" id="sexF"><label for="sexF">Feminino</label></p>
-      <button onclick="gerarIdade()">Verificar</button>
-      <div id="container">
-        <p id="idade_text">Olá</p>
-        <div id="image"></div>
-      </div>
-    </main>
+      <h1>Verificador de Idade</h1>
+      <section>
+        <label for="ano">Ano de Nascimento: <input type="number" name="" id="ano"></label>
+        <p>Sexo: <label for="sexM"><input type="checkbox" name="" id="sexM"> Masculino</label> <label for="sexF"><input type="checkbox" name="" id="sexF"> Feminino</label></p>
+        <button onclick="verificar()">Verificar</button>
+        <p>Preencha os dados acima para ver o resultado</p>
+      </section>
     <script src="index.js"></script>
   </body>
 </html>

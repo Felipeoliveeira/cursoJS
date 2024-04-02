@@ -1,7 +1,5 @@
-let nascimento = document.getElementById('year');
-let 
+let anoNascimento = document.getElementById('ano');
 
-function gerarIdade(){
-
-    console.log(`${nascimento.value}`)
+function verificar(){
+    console.log(anoNascimento.value)
 }

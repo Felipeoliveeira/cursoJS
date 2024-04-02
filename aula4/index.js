@@ -1,21 +1,18 @@
 let boxHorario = document.getElementById("horaAtual");
 let horaSistema = new Date().getHours();
-boxHorario.textContent = `Agora são ${horaSistema} horas`;
+let minutoSistema = new Date().getMinutes();
 let corDeFundo = document.querySelector("body");
-let divImage = document.querySelector("div");
-let entardercerURL =
-  "https://images.pexels.com/photos/724507/pexels-photo-724507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-let anoitecerURL =
-  "https://images.pexels.com/photos/1539225/pexels-photo-1539225.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+let img = document.getElementById("img");
 
-if (horaSistema <= 12) {
-  boxHorario.textContent = `Agora são ${horaSistema} horas da manhã`;
-} else if (horaSistema >= 13 && horaSistema <= 18) {
-  boxHorario.textContent = `Agora são ${horaSistema} horas da tarde`;
+if (horaSistema >= 0 && horaSistema < 12) {
+  boxHorario.textContent = `Agora são ${horaSistema}:${minutoSistema} horas da manhã`;
+  img.src = "style/amanhecer.jpg";
+} else if (horaSistema >= 12 && horaSistema < 18) {
+  boxHorario.textContent = `Agora são ${horaSistema}:${minutoSistema} horas da tarde`;
   corDeFundo.style.backgroundColor = "rgb(221, 123, 106)";
-  divImage.style.backgroundImage = `url(${entardercerURL})`;
+  img.src = "style/entardecer.jpg";
 } else {
-  boxHorario.textContent = `Agora são ${horaSistema} horas da noite`;
+  boxHorario.textContent = `Agora são ${horaSistema}:${minutoSistema} horas da noite`;
   corDeFundo.style.backgroundColor = "rgb(68, 67, 67)";
-  divImage.style.backgroundImage = `url(${anoitecerURL})`;
+  img.src = "style/noite.jpg"
 }
