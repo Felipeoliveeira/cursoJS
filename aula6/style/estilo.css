@@ -16,8 +16,8 @@ h1 {
 }
 
 section {
-  height: 30%;
-  width: 60%;
+  height: 100px;
+  width: 500px;
   background-color: whitesmoke;
   padding: 20px;
   border-radius: 8px;
@@ -26,14 +26,17 @@ section {
   gap: 10px;
 }
 
+#image{
+  padding: 10px;
+}
+
 button {
   width: 20%;
 }
-#image {
-  width: 30%;
-  height: 30%;
-}
 
+#img_container{
+  text-align: center;
+}
 footer {
   margin-top: 10px;
   color: azure;
