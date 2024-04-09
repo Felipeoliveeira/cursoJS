@@ -13,6 +13,7 @@ body {
 
 h1 {
   padding: 10px;
+  color: blanchedalmond;
 }
 
 section {
@@ -27,7 +28,6 @@ section {
 
 #image {
   padding-top: 15px;
-  width: 190px;
   border-radius: 50%;
   object-fit: contain;
 }
@@ -44,4 +44,10 @@ footer {
   margin-top: 10px;
   color: azure;
   box-shadow: 1px 3px 3px black;
+}
+
+@media (max-width: 700px) {
+  section{
+    width: 300px;
+  }
 }

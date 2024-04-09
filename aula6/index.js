@@ -9,17 +9,22 @@ function verificar() {
   let idade = anoAtual - Number.parseInt(anoNascimento);
 
   if (sexMen.checked &&  idade <= 15) {
-    mensage.innerText = `Você é um jovem de ${idade} anos de idade`
-    image.src = "style/garotojovem.jpg";
+    mensage.innerText = `Detectamos um jovem de ${idade} anos de idade`
+    image.src = "style/homemjovem.jpg";
   } else if (sexFem.checked && idade <= 15) {
-    mensage.innerText = `Você é uma jovem de ${idade} anos de idade`
-    image.src = "style/garotajovem.jpg";
-  } else if (sexMen.checked && idade >= 16) {
-    mensage.innerText = `Você é um rapaz de ${idade} anos de idade`
-    image.src = "style/garotoadolescente.jpg";
-  } else if (sexFem.checked && idade >= 16) {
-    mensage.innerText = `Você é um jovem de ${idade} anos de idade`;
-    image.src = "style/garotaadolescente.jpg";
+    mensage.innerText = `Detectamos uma jovem de ${idade} anos de idade`
+    image.src = "style/mulherjovem.jpg";
+  } else if (sexMen.checked && idade < 40) {
+    mensage.innerText = `Detectamos um homem de ${idade} anos de idade`
+    image.src = "style/homem.jpg";
+  } else if (sexFem.checked && idade < 40) {
+    mensage.innerText = `Detectamos uma mulher de ${idade} anos de idade`;
+    image.src = "style/mulher.jpg";
+  } else if (sexFem.checked && idade >= 40) {
+    mensage.innerText = `Detectamos uma mulher de ${idade} anos de idade`;
+    image.src = "style/mulherIdosa.jpg";
+  } else if (sexMen.checked && idade >= 40) {
+    mensage.innerText = `Detectamos um homem de ${idade} anos de idade`;
+    image.src = "style/homemidoso.jpg";
   }
-  console.log(idade);
 }
