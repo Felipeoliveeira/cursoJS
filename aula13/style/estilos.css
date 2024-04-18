@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    height: 95vh;
+    background-color: #3c82d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    padding: 20px;
+}
+
+section{
+    height: 200px;
+    width: 500px;
+    background-color: white;
+    padding: 30px 0px 0px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px black;
+}
+
+form{
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+ }
+
+button{
+    width: 80px;
+}
+
+footer{
+    color: white;
+    padding: 8px;
+}
