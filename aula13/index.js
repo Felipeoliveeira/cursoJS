@@ -3,6 +3,7 @@ function contar(){
     let fim = document.getElementById('fim').value;
     let passo = document.getElementById('passo').value;
     let containerRes = document.getElementById('res');
+    let zerar = document.getElementById('zerar');
     let sequencia = '';
     inicio = Number(inicio);
     passo = Number(passo);
@@ -15,7 +16,7 @@ function contar(){
     while ( inicio < fim){
         inicio += passo
         if( inicio < fim){
-            sequencia += inicio + '\u{1F449} '
+            sequencia += inicio + ' \u{1F449} '
             containerRes.innerText = sequencia + '\u{1F3C1}'
             console.log(sequencia)
         }
@@ -24,8 +25,8 @@ function contar(){
     while ( inicio > fim){
         inicio -= passo
         if( inicio > fim){
-            sequencia += inicio + ', '
-            containerRes.innerText = sequencia
+            sequencia += inicio + '\u{1F449} '
+            containerRes.innerText = sequencia + '\u{1F3C1}'
             console.log(sequencia)
         }
     }
