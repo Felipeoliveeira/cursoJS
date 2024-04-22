@@ -16,7 +16,7 @@ function contar(){
         inicio += passo
         if( inicio < fim){
             sequencia += inicio + '\u{1F449} '
-            containerRes.innerText = sequencia
+            containerRes.innerText = sequencia + '\u{1F3C1}'
             console.log(sequencia)
         }
     }
