@@ -21,7 +21,6 @@ h1{
 }
 
 section{
-    height: 200px;
     width: 500px;
     background-color: white;
     padding: 30px 0px 5px 20px;
@@ -38,7 +37,12 @@ button{
 }
 
 #resultado{
-    width: 90%;
+    text-align: center;
+}
+
+#res{
+    padding: 15px;
+    object-fit: contain;
 }
 footer{
     color: white;
