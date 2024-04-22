@@ -7,11 +7,12 @@
 }
 
 body{
-    height: 95vh;
+    height: 100vh;
     background-color: #3c82d3;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
 }
 
 h1{
@@ -23,23 +24,22 @@ section{
     height: 200px;
     width: 500px;
     background-color: white;
-    padding: 30px 0px 0px 20px;
+    padding: 30px 0px 5px 20px;
     border-radius: 8px;
     box-shadow: 2px 2px 3px black;
-}
-
-form{
-    height: 150px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
 
- }
 
 button{
     width: 80px;
 }
 
+#resultado{
+    width: 90%;
+}
 footer{
     color: white;
     padding: 8px;
