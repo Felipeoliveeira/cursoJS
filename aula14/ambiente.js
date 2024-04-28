@@ -1,5 +1,2 @@
-console.log('Vai começar')
-for(c = 1; c <= 5; c++){
-    console.log(c)
-}
-console.log('Fim!')
+let vetor = [3, 5, 7, 1, 9, 4, 6]
+console.log(vetor.sort())
